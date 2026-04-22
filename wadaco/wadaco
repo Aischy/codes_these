@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Vérifie qu'un argument est bien passé
+if [ -z "$1" ]; then
+  echo "Usage: wadaco <number>"
+  exit 1
+fi
+
+# Active l'environnement virtuel
+source venv/bin/activate
+
+# Exécute le script avec l'argument
+python3 ~/WaDaCo-terminal/WaDaCo_terminal.py "$1"
